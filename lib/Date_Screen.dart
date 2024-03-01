@@ -113,69 +113,77 @@ class _DateCalendarState extends State<DateCalendar> {
   }
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding:  EdgeInsets.all(6.w),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          CustomButton(
-            onTap:  () {
-              showModalBottomSheet(
-                context: context,
-                builder: (context) {
-                  return Padding(
-                    padding:  EdgeInsets.all(5.w),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text("Calendar",style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),),
-                        Divider(height: 5.h,),
-                        Expanded(
-                          child: Container(
-
-                            child: TableCalendar(
-                              locale: "en_US",
-                              rowHeight: 43,
-                              headerStyle:
-                              HeaderStyle(formatButtonVisible: false,titleCentered: true),
-                              availableGestures: AvailableGestures.all,
-                              selectedDayPredicate: (day) => isSameDay(day, today),
-                              focusedDay: today,
-                              firstDay: DateTime.utc(2010, 10, 16),
-                              lastDay: DateTime.utc(2030, 3, 14),
-                              onDaySelected: _onDaySelected,
-                            ),
-                          ),
-                        ),
-                        Row(
+    return Scaffold(
+      body: Padding(
+        padding:  EdgeInsets.only(left: 3.w,right: 3.w, bottom: 4.h),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            CustomButton(
+              onTap:  () {
+                showModalBottomSheet(
+                  context: context,scrollControlDisabledMaxHeightRatio: 12.w,
+                  builder: (context) {
+                    return Padding(
+                      padding:  EdgeInsets.only(top: 2.h,right: 4.w,left: 4.w),
+                      child: SingleChildScrollView(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
+                            Text("Calendar",style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),),
+                            Divider(height: 5.h,),
                             Container(
-                              child: Column(
+                              child: TableCalendar(
+                                locale: "en_US",
+                                rowHeight: 43,
+                                headerStyle:
+                                HeaderStyle(formatButtonVisible: false,titleCentered: true),
+                                availableGestures: AvailableGestures.all,
+                                selectedDayPredicate: (day) => isSameDay(day, today),
+                                focusedDay: today,
+                                firstDay: DateTime.utc(2010, 10, 16),
+                                lastDay: DateTime.utc(2030, 3, 14),
+                                onDaySelected: _onDaySelected,
+                              ),
+                            ),
+                            Padding(
+                              padding:  EdgeInsets.only(left: 4.h,right: 7.h, top: 4.w,bottom: 4.w),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Text("Depart",style: TextStyle(color: Colors.blue),),
-                                  Text("2 Sep 2024",style: TextStyle(fontWeight: FontWeight.bold),),
+                                  Container(
+                                    child: Column(
+                                       crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Text("Depart",style: TextStyle(color: Colors.blue),),
+                                        Text("2 Sep 2024",style: TextStyle(fontWeight: FontWeight.bold),),
+                                      ],
+                                    ),
+                                  ),
+                                  Container(
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Text("Return",style: TextStyle(color: Colors.blue),),
+                                        Text("2 Sep 2024",style: TextStyle(fontWeight: FontWeight.bold),),
+                                      ],
+                                    ),
+                                  ),
                                 ],
                               ),
                             ),
-                            Container(
-                              child: Column(
-                                children: [
-                                  Text("Return",style: TextStyle(color: Colors.blue),),
-                                  Text("2 Sep 2024",style: TextStyle(fontWeight: FontWeight.bold),),
-                                ],
-                              ),
-                            ),
+                            CustomButton(title: "SAVE"),
+                            SizedBox(height: 2.h,),
                           ],
                         ),
-                        //CustomButton(title: "SAVE"),
-                      ],
-                    ),
-                  );
-                },);
+                      ),
+                    );
+                  },
+                );
               }, title: 'SAVE',
-           // child: Text("SAVE"),
-          ),
-        ],
+            ),
+          ],
+        ),
       ),
     );
   }

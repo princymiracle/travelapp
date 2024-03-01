@@ -29,7 +29,7 @@ class CustomButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: () => onTap!(),
       style: ButtonStyle(
-        fixedSize: MaterialStateProperty.all(size ?? (Size(150.w, 5.h )),),
+        fixedSize: MaterialStateProperty.all(size ?? (Size(150.w, 6.h )),),
         shape: MaterialStateProperty.all(
           RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(radius ?? 12),
@@ -40,7 +40,7 @@ class CustomButton extends StatelessWidget {
       child: Text(
         title,
         style: TextStyle(
-          fontSize: fontSIze ?? 18.sp,
+          fontSize: fontSIze ?? 10.sp,
           color: fontColor ?? Colors.grey,
         ),
       ),
