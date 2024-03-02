@@ -94,7 +94,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:sizer/sizer.dart';
+import 'package:flutter_sizer/flutter_sizer.dart';
 import 'package:table_calendar/table_calendar.dart';
 import 'package:travelapp/Custom_Elements/Elements/CustomButtons.dart';
 
