@@ -33,7 +33,6 @@ class CustomContainer extends StatelessWidget {
       alignment: alignment,
       margin: margin,
       child: child,
-
     );
   }
 }

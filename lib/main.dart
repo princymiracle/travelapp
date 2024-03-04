@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sizer/flutter_sizer.dart';
 import 'package:get/get.dart';
+import 'Date_Screen.dart';
 import 'Routes/Routes.dart';
 import 'Routes/Screens.dart';
 
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
           ),
           getPages: Screens.routes,
           initialRoute: Routes.splashScreen,
-          // home: DateCalendar(),
+           //home: DateScreen(),
         );
       },
     );

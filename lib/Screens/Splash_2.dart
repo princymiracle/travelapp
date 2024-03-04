@@ -56,7 +56,7 @@ class SplashS2 extends StatelessWidget {
                 height: 6.5.h,
                 width: 85.w,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(23),
+                  borderRadius: BorderRadius.circular(18),
                   border: Border.all(color: CustomColors.Buttonbg),
                 ),
                 child: Row(
