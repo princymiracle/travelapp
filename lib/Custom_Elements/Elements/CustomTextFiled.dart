@@ -1,3 +1,6 @@
+import 'dart:ui';
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_sizer/flutter_sizer.dart';
 
@@ -15,6 +18,8 @@ class CustomTextFiled extends StatelessWidget {
   TextStyle? hintStyle;
   EdgeInsets? contentPadding;
   double? radius;
+//  Function? validator;
+  FormFieldValidator<String>? validator;
 
   CustomTextFiled({
     required this.controller,
@@ -28,6 +33,8 @@ class CustomTextFiled extends StatelessWidget {
     this.hintStyle,
     this.contentPadding,
     this.radius = 15,
+     this.validator
+   // this.validator,
   });
 
   @override
@@ -65,7 +72,7 @@ class CustomTextFiled extends StatelessWidget {
             hintStyle: TextStyle(
                 color: CustomColors.textfiledtext,
             ),
-          ),
+          ), validator: validator
         ),
       ),
     );
