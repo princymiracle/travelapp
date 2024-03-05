@@ -7,7 +7,6 @@ class CustomColors {
   static const Buttonbg =Color(0xFF5495FF);
   static const Buttonbg1 =Color(0xFF8BD8F9);
   static const backgroundColor =Color(0xFFF4FEFF);
- // static const backgroundColor =Color(0xFF000000);
   static const texttitle =Color(0xFF5496FF);
   static const black = Color(0xFF000000);
   static const textfiledtext = Colors.grey;

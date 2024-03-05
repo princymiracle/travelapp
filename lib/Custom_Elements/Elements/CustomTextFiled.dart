@@ -40,6 +40,21 @@ class CustomTextFiled extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(15),
+        // boxShadow: [
+        //   BoxShadow(
+        //     color: Colors.black.withOpacity(0.3),
+        //     offset: Offset(0, 1),
+        //     blurRadius: 5,
+        //     spreadRadius: 0,
+        //   )
+        // ],
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.3),
+            blurRadius: 5,
+            offset: Offset(4, 8), // Shadow position
+          ),
+        ],
       ),
       child: Padding(
         padding:  EdgeInsets.only(left: 5.w),

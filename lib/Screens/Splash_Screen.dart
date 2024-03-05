@@ -3,11 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_sizer/flutter_sizer.dart';
 import 'package:get/get.dart';
 import 'package:travelapp/Constant/Image_Path.dart';
-import 'package:travelapp/Custom_Elements/Elements/CustomButtons.dart';
 import 'package:travelapp/Custom_Elements/Elements/Custom_Styles.dart';
-
 import '../Constant/AppString.dart';
 import '../Custom_Elements/Elements/Custom_Color.dart';
+import '../Custom_Elements/Elements/Custom_Container.dart';
 import '../Routes/Routes.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -18,8 +17,6 @@ class SplashScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: CustomColors.backgroundColor,
       body: Container(
-        // width: MediaQuery.of(context).size.width,
-        // height:  MediaQuery.of(context).size.height,
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -69,12 +66,37 @@ class SplashScreen extends StatelessWidget {
                      ),
                    ),
                    SizedBox(height: 3.h,),
-                   CustomButton(
-                     title: AppString.Enter,
-                     fontSIze: 14.sp,
-                     size: Size(35.w, 4.h),
+                   InkWell(
                      onTap: () => Get.toNamed(Routes.splashScreen2),
+                     child: CustomContainer(
+                       height: 4.h,
+                       width: 30.w,
+                       decoration: BoxDecoration(
+                         borderRadius: BorderRadius.circular(15),
+                         gradient: LinearGradient(
+                           colors: [
+                             CustomColors.Buttonbg,
+                             CustomColors.Buttonbg1,
+                           ],
+                         ),
+                       ),
+                       child: Center(
+                         child: Text(AppString.Enter,
+                           style: CustomStyles.textStyle(
+                             fontWeight: FontWeight.bold,
+                             fontColor: CustomColors.Buttontext,
+                             fontSize: 15.sp,
+                           ),
+                         ),
+                       ),
+                     ),
                    ),
+                   // CustomButton(
+                   //   title: AppString.Enter,
+                   //   fontSIze: 14.sp,
+                   //   size: Size(35.w, 4.h),
+                   //   onTap: () => Get.toNamed(Routes.splashScreen2),
+                   // ),
                  ],
                ),
              ),
