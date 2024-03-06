@@ -18,7 +18,6 @@ class CustomTextFiled extends StatelessWidget {
   TextStyle? hintStyle;
   EdgeInsets? contentPadding;
   double? radius;
-//  Function? validator;
   FormFieldValidator<String>? validator;
 
   CustomTextFiled({
@@ -33,8 +32,7 @@ class CustomTextFiled extends StatelessWidget {
     this.hintStyle,
     this.contentPadding,
     this.radius = 15,
-     this.validator
-   // this.validator,
+     this.validator,
   });
 
   @override

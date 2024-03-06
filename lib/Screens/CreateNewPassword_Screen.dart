@@ -15,6 +15,8 @@ class NewPassword extends StatelessWidget {
 
   AuthController authContoller=Get.put(AuthController());
 
+   final _formKey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,68 +35,88 @@ class NewPassword extends StatelessWidget {
                     left: 8.w,
                     right: 8.w,
                   ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.asset(ImagePath.logimg,fit: BoxFit.cover,),
-                      SizedBox(height: 6.h,),
-                      Text(
-                        AppString.createnewpassword,
-                        style: TextStyle(
-                          color: CustomColors.texttitle,
-                          fontSize: 19.sp,
-                          fontWeight: FontWeight.bold,
+                  child: Form(
+                    key: _formKey,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Image.asset(ImagePath.logimg,fit: BoxFit.cover,),
+                        SizedBox(height: 6.h,),
+                        Text(
+                          AppString.createnewpassword,
+                          style: TextStyle(
+                            color: CustomColors.texttitle,
+                            fontSize: 19.sp,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
-                      ),
-                      SizedBox(height: 1.h,),
-                      Text(
-                        AppString.enteryouremailorphonenumber,
-                        style: CustomStyles.textStyle(
-                          fontColor: CustomColors.textfiledtext,
-                          fontSize: 12.sp,
+                        SizedBox(height: 1.h,),
+                        Text(
+                          AppString.enteryouremailorphonenumber,
+                          style: CustomStyles.textStyle(
+                            fontColor: CustomColors.textfiledtext,
+                            fontSize: 12.sp,
+                          ),
                         ),
-                      ),
-                      CustomTextFiled(
-                        controller: authContoller.newpassController,
-                        hintext: AppString.NewPassword,
-                      ),
-                      CustomTextFiled(
-                        controller: authContoller.confirmpassController,
-                        hintext: AppString.ConfirmPassword,
-                      ),
-                      SizedBox(height: 3.h,),
-                      InkWell(
-                        onTap: () => Get.toNamed(Routes.registersucces),
-                        child: CustomContainer(
-                          height: 6.5.h,
-                          width: 85.w,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(18),
-                            gradient: LinearGradient(
-                              colors: [
-                                CustomColors.Buttonbg,
-                                CustomColors.Buttonbg1,
+                        CustomTextFiled(
+                          controller: authContoller.newpassController,
+                          hintext: AppString.NewPassword,
+                            validator: (value) {
+                              if( value == null || value.isEmpty){
+                                return 'Please enter Your New Password';
+                              }
+                              return null;
+                            }
+                        ),
+                        CustomTextFiled(
+                          controller: authContoller.confirmpassController,
+                          hintext: AppString.ConfirmPassword,
+                            validator: (value) {
+                              if( value == null || value.isEmpty){
+                                return 'Please enter ConforimPassword';
+                              }
+                              return null;
+                            }
+                        ),
+                        SizedBox(height: 3.h,),
+                        InkWell(
+                          onTap: () {
+                            if (_formKey.currentState!.validate()){
+                              Get.toNamed(Routes.registersucces);
+                            }
+                          },
+                         // onTap: () => Get.toNamed(Routes.registersucces),
+                          child: CustomContainer(
+                            height: 6.5.h,
+                            width: 85.w,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(18),
+                              gradient: LinearGradient(
+                                colors: [
+                                  CustomColors.Buttonbg,
+                                  CustomColors.Buttonbg1,
+                                ],
+                              ),
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  AppString.changepassword,
+                                  style: CustomStyles.textStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontColor: CustomColors.Buttontext,
+                                    fontSize: 15.sp,
+                                  ),
+                                ),
+                                SizedBox(width: 1.w,),
+                                Icon(Icons.arrow_forward,color: CustomColors.Buttontext,size: 15,),
                               ],
                             ),
                           ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                AppString.changepassword,
-                                style: CustomStyles.textStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontColor: CustomColors.Buttontext,
-                                  fontSize: 15.sp,
-                                ),
-                              ),
-                              SizedBox(width: 1.w,),
-                              Icon(Icons.arrow_forward,color: CustomColors.Buttontext,size: 15,),
-                            ],
-                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),

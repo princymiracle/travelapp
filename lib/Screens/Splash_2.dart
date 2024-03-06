@@ -52,26 +52,29 @@ class SplashS2 extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 3.h,),
-              CustomContainer(
-                height: 6.5.h,
-                width: 85.w,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(18),
-                  border: Border.all(color: CustomColors.Buttonbg),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(AppString.registeryouraccount,
-                    style: CustomStyles.textStyle(
-                      fontWeight: FontWeight.bold,
-                      fontColor: CustomColors.Buttonbg,
-                      fontSize: 15.sp,
-                    ),
+              InkWell(
+                onTap: () => Get.toNamed(Routes.signupScreen),
+                child: CustomContainer(
+                  height: 6.5.h,
+                  width: 85.w,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(18),
+                    border: Border.all(color: CustomColors.Buttonbg),
                   ),
-                  SizedBox(width: 1.w,),
-                    Icon(Icons.arrow_forward,color: CustomColors.Buttonbg,size: 15,),
-                  ]
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(AppString.registeryouraccount,
+                      style: CustomStyles.textStyle(
+                        fontWeight: FontWeight.bold,
+                        fontColor: CustomColors.Buttonbg,
+                        fontSize: 15.sp,
+                      ),
+                    ),
+                    SizedBox(width: 1.w,),
+                      Icon(Icons.arrow_forward,color: CustomColors.Buttonbg,size: 15,),
+                    ]
+                  ),
                 ),
               ),
             ],

@@ -1,7 +1,10 @@
+import 'dart:html';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_sizer/flutter_sizer.dart';
 import 'package:get/get.dart';
+import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:otp_text_field/otp_field.dart';
 import 'package:otp_text_field/otp_field_style.dart';
@@ -98,6 +101,7 @@ class FPotp extends StatelessWidget {
                           outlineBorderRadius: 10,
                           onChanged: (value) {},
                           width: double.infinity,
+
                         ),
                       ),
                 

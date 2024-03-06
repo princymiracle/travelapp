@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 import 'package:travelapp/Screens/CreateNewPassword_Screen.dart';
 import 'package:travelapp/Screens/Forget_Password.dart';
 import 'package:travelapp/Screens/Forget_Password_otp.dart';
+import 'package:travelapp/Screens/Home/Home_Page.dart';
 import 'package:travelapp/Screens/RegisterSucces.dart';
 import 'package:travelapp/Screens/Signup_Screen.dart';
 import '../Screens/Login_Screen.dart';
@@ -20,6 +21,8 @@ class Screens {
     GetPage(name: Routes.fpotp, page: () => FPotp(),),
     GetPage(name: Routes.newpass, page: () => NewPassword(),),
     GetPage(name: Routes.registersucces, page: () => RegisterSucces(),),
+
+    GetPage(name: Routes.homepage, page: () => HomePage(),),
 
   ];
 }

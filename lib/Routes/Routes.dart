@@ -9,5 +9,6 @@ class Routes {
   static const newpass = '/newpass';
   static const registersucces = '/registersucces';
 
+  static const homepage = '/homepage';
 
 }
