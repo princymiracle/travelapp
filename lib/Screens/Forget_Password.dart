@@ -21,19 +21,37 @@ class ForgetPassword extends StatefulWidget {
 class _ForgetPasswordState extends State<ForgetPassword> {
   AuthController authContoller=Get.put(AuthController());
 
-  void validateEmail() {
-    final bool isValid = EmailValidator.validate(authContoller.FPemailController.text.trim());
-
-    if(isValid){
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Valid Email')),);
-    } else {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Not a Valid Email')),);
-    }
-  }
+  // void validateEmail() {
+  //   final bool isValid = EmailValidator.validate(authContoller.FPemailController.text.trim());
+  //
+  //   if(isValid){
+  //     ScaffoldMessenger.of(context).showSnackBar(
+  //       SnackBar(content: Text('Valid Email')),);
+  //   } else {
+  //     ScaffoldMessenger.of(context).showSnackBar(
+  //       SnackBar(content: Text('Not a Valid Email')),);
+  //   }
+  // }
 
  // final _formKey = GlobalKey<FormState>();
+
+
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+
+  // void _submitForm() {
+  //   if(_formKey.currentState!.validate()) {}
+  // }
+
+  String? _validateEmail(value) {
+    if(value!.isEmpty) {
+      return 'Please enter an email';
+    }
+    RegExp  emailRegExp = RegExp(r'^.+@[a-zA-Z]+\.{1}[a-zA-Z]+(\.{0,1}[a-zA-Z]+)$');
+    if (!emailRegExp.hasMatch(value)){
+      return 'Please enter a valid email';
+    }
+    return null;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +72,8 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                     right: 8.w,
                   ),
                   child: Form(
-                  //  key: _formKey,
+                    key: _formKey,
+                    //key: _formKey,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -101,22 +120,29 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                         CustomTextFiled(
                             controller: authContoller.FPemailController,
                             hintext: AppString.Enteremail,
-                            validator: (value) {
-                              if( value == null || value.isEmpty){
-                                return 'Please enter some text';
-                              }
-                              return null;
-                            }
+                            validator: _validateEmail,
+                            // validator: (value) {
+                            //   if( value == null || value.isEmpty){
+                            //     return 'Please enter some text';
+                            //   }
+                            //   return null;
+                            // }
                         ),
                         SizedBox(height: 3.h,),
                         InkWell(
-                          onTap: () => validateEmail(),
+                          onTap: () {
+                            if(_formKey.currentState!.validate()) {
+                              Get.toNamed(Routes.fpotp);
+                            }
+                          },
+                         // onTap: _submitForm,
+                         // onTap: () => validateEmail(),
                          //  onTap: () {
                          //    if (_formKey.currentState!.validate()){
                          //      Get.toNamed(Routes.fpotp);
                          //    }
                          //  },
-                          //onTap: () => Get.toNamed(Routes.fpotp),
+                         // onTap: () => Get.toNamed(Routes.fpotp),
                           child: CustomContainer(
                             height: 6.5.h,
                             width: 85.w,
