@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sizer/flutter_sizer.dart';
 import 'package:get/get.dart';
-import 'Date_Screen.dart';
 import 'Routes/Routes.dart';
 import 'Routes/Screens.dart';
 
@@ -31,13 +30,4 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-// class Hello extends StatelessWidget {
-//   const Hello({super.key});
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold();
-//   }
-// }
 

@@ -1,16 +1,13 @@
-import 'dart:html';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_sizer/flutter_sizer.dart';
 import 'package:get/get.dart';
-import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:otp_text_field/otp_field.dart';
 import 'package:otp_text_field/otp_field_style.dart';
+import 'package:otp_text_field/otp_text_field.dart';
 import 'package:otp_text_field/style.dart';
 import 'package:travelapp/Constant/AppString.dart';
-
 import '../Constant/Image_Path.dart';
 import '../Custom_Elements/Elements/Custom_Color.dart';
 import '../Custom_Elements/Elements/Custom_Container.dart';
@@ -18,9 +15,9 @@ import '../Custom_Elements/Elements/Custom_Styles.dart';
 import '../Routes/Routes.dart';
 
 class FPotp extends StatelessWidget {
-  const FPotp({super.key});
+   FPotp({super.key});
 
-
+  //  OtpFieldController _otpController = OtpFieldController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -82,10 +79,12 @@ class FPotp extends StatelessWidget {
                           ),
                         ),
                       ),
-                
+
                       Padding(
                         padding: EdgeInsets.symmetric(horizontal: 1.w),
                         child: OTPTextField(
+                         // controller: _otpController,
+                          keyboardType: TextInputType.number,
                           length: 4,
                           fieldWidth: 14.w,
                           otpFieldStyle: OtpFieldStyle(
@@ -99,14 +98,27 @@ class FPotp extends StatelessWidget {
                           fieldStyle: FieldStyle.box,
                           style: TextStyle(color: CustomColors.textfiledtext,fontWeight: FontWeight.bold),
                           outlineBorderRadius: 10,
-                          onChanged: (value) {},
+                          // onChanged: (value) {
+                          //   _otp = value;
+                          // },
                           width: double.infinity,
-
                         ),
                       ),
-                
+
                       SizedBox(height: 3.h,),
                       InkWell(
+                        // onTap: () {
+                        //  setState(() {
+                        //    if(_otp.length == 4){
+                        //      _otpController.clear();
+                        //      Get.toNamed(Routes.newpass);
+                        //    }else{
+                        //      print("Please enter your valid otp ");
+                        //      Navigator.pop(context);
+                        //    }
+                        //  });
+                        //
+                        // },
                         onTap: () => Get.toNamed(Routes.newpass),
                         child: CustomContainer(
                           height: 6.5.h,
@@ -146,4 +158,214 @@ class FPotp extends StatelessWidget {
         ),
       ),
     );
-  }}
+  }
+   //
+   // void _validateOTP() {
+   //   String enteredOTP = _otpController.toString();
+   //   if (enteredOTP == _otp) {
+   //     // OTP is correct
+   //     showDialog(
+   //       context: context,
+   //       builder: (BuildContext context) {
+   //         return AlertDialog(
+   //           title: Text('Success'),
+   //           content: Text('OTP is correct.'),
+   //           actions: <Widget>[
+   //             TextButton(
+   //               onPressed: () {
+   //                 Navigator.of(context).pop();
+   //               },
+   //               child: Text('OK'),
+   //             ),
+   //           ],
+   //         );
+   //       },
+   //     );
+   //   } else {
+   //     // Incorrect OTP
+   //     showDialog(
+   //       context: context,
+   //       builder: (BuildContext context) {
+   //         return AlertDialog(
+   //           title: Text('Error'),
+   //           content: Text('Incorrect OTP. Please try again.'),
+   //           actions: <Widget>[
+   //             TextButton(
+   //               onPressed: () {
+   //                 Navigator.of(context).pop();
+   //               },
+   //               child: Text('OK'),
+   //             ),
+   //           ],
+   //         );
+   //       },
+   //     );
+   //   }
+   // }
+}
+
+//
+// import 'package:flutter/material.dart';
+// import 'package:flutter_sizer/flutter_sizer.dart';
+// import 'package:get/get.dart';
+// import 'package:otp_text_field/otp_text_field.dart';
+// import 'package:travelapp/Constant/AppString.dart';
+// import '../Constant/Image_Path.dart';
+// import '../Custom_Elements/Elements/Custom_Color.dart';
+// import '../Custom_Elements/Elements/Custom_Container.dart';
+// import '../Custom_Elements/Elements/Custom_Styles.dart';
+// import '../Routes/Routes.dart';
+//
+// class FPotp extends StatefulWidget {
+//   FPotp({Key? key}) : super(key: key);
+//
+//   @override
+//   State<FPotp> createState() => _FPotpState();
+// }
+//
+// class _FPotpState extends State<FPotp> {
+//   late OtpFieldController _otpController;
+//   String _otp = "";
+//
+//   @override
+//   void initState() {
+//     super.initState();
+//     _otpController = OtpFieldController();
+//   }
+//
+//   @override
+//   void dispose() {
+//     _otpController.clear();
+//     super.dispose();
+//   }
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       backgroundColor: CustomColors.backgroundColor,
+//       body: Container(
+//         child: Stack(
+//           children: [
+//             Center(
+//               child: Image.asset(ImagePath.background, fit: BoxFit.cover),
+//             ),
+//             SingleChildScrollView(
+//               child: Container(
+//                 child: Padding(
+//                   padding: EdgeInsets.only(
+//                     top: 10.h,
+//                     left: 8.w,
+//                     right: 8.w,
+//                   ),
+//                   child: Column(
+//                     crossAxisAlignment: CrossAxisAlignment.start,
+//                     children: [
+//                       Image.asset(ImagePath.logimg, fit: BoxFit.cover),
+//                       SizedBox(height: 6.h),
+//                       Text(
+//                         AppString.forgetpassword,
+//                         style: TextStyle(
+//                           color: CustomColors.texttitle,
+//                           fontSize: 19.sp,
+//                           fontWeight: FontWeight.bold,
+//                         ),
+//                       ),
+//                       SizedBox(height: 1.h),
+//                       Text(
+//                         AppString.enteryouremailorphonenumber,
+//                         style: CustomStyles.textStyle(
+//                           fontColor: CustomColors.textfiledtext,
+//                           fontSize: 12.sp,
+//                         ),
+//                       ),
+//                       Padding(
+//                         padding: EdgeInsets.only(top: 4.h, bottom: 1.h),
+//                         child: Center(
+//                           child: Column(
+//                             children: [
+//                               Text(
+//                                 AppString.verificationcode,
+//                                 style: CustomStyles.textStyle(
+//                                   fontColor: CustomColors.textfiledtext,
+//                                 ),
+//                               ),
+//                               Padding(
+//                                 padding: EdgeInsets.only(left: 15.w, right: 15.w),
+//                                 child: Divider(
+//                                   color: CustomColors.textfiledtext,
+//                                   thickness: 2,
+//                                 ),
+//                               ),
+//                             ],
+//                           ),
+//                         ),
+//                       ),
+//                       Padding(
+//                         padding: EdgeInsets.symmetric(horizontal: 1.w),
+//                         child: OTPTextField(
+//                           controller: _otpController,
+//                           keyboardType: TextInputType.number,
+//                           length: 4,
+//                           fieldWidth: 14.w,
+//                           outlineBorderRadius: 10,
+//                           style: TextStyle(
+//                             color: CustomColors.textfiledtext,
+//                             fontWeight: FontWeight.bold,
+//                           ),
+//                           onChanged: (value) {
+//                             _otp = value;
+//                           },
+//                           width: double.infinity,
+//                         ),
+//                       ),
+//                       SizedBox(height: 3.h),
+//                       InkWell(
+//                         onTap: () {
+//                           if (_otp.length == 4) {
+//                             _otpController.clear();
+//                             // Navigating to new page if OTP is valid
+//                             Get.toNamed(Routes.newpass);
+//                           } else {
+//                             print("Please enter a valid OTP");
+//                           }
+//                         },
+//                         child: CustomContainer(
+//                           height: 6.5.h,
+//                           width: 85.w,
+//                           decoration: BoxDecoration(
+//                             borderRadius: BorderRadius.circular(18),
+//                             gradient: LinearGradient(
+//                               colors: [
+//                                 CustomColors.Buttonbg,
+//                                 CustomColors.Buttonbg1,
+//                               ],
+//                             ),
+//                           ),
+//                           child: Row(
+//                             mainAxisAlignment: MainAxisAlignment.center,
+//                             children: [
+//                               Text(
+//                                 AppString.submit,
+//                                 style: CustomStyles.textStyle(
+//                                   fontWeight: FontWeight.bold,
+//                                   fontColor: CustomColors.Buttontext,
+//                                   fontSize: 15.sp,
+//                                 ),
+//                               ),
+//                               SizedBox(width: 1.w),
+//                               Icon(Icons.arrow_forward, color: CustomColors.Buttontext, size: 15),
+//                             ],
+//                           ),
+//                         ),
+//                       ),
+//                     ],
+//                   ),
+//                 ),
+//               ),
+//             ),
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
