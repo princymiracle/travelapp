@@ -6,4 +6,8 @@ class ImagePath {
   static const Spl2 = "assets/images/sps2.png";
   static const logimg = "assets/images/logimg.png";
   static const register = "assets/images/Register.png";
+
+
+  static const flight = "assets/images/flight.png";
+  static const lion = "assets/images/lion.png";
 }

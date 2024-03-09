@@ -3,6 +3,7 @@ import 'package:flutter_sizer/flutter_sizer.dart';
 import 'package:get/get.dart';
 import 'Routes/Routes.dart';
 import 'Routes/Screens.dart';
+import 'Select_Flights.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,9 +23,10 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             primarySwatch: Colors.blue,
           ),
-          getPages: Screens.routes,
-          initialRoute: Routes.splashScreen,
+          // getPages: Screens.routes,
+          // initialRoute: Routes.splashScreen,
            //home: DateScreen(),
+          home: SelectFlight(),
         );
       },
     );
