@@ -23,10 +23,9 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             primarySwatch: Colors.blue,
           ),
-          // getPages: Screens.routes,
-          // initialRoute: Routes.splashScreen,
+          getPages: Screens.routes,
+          initialRoute: Routes.splashScreen,
            //home: DateScreen(),
-          home: SelectFlight(),
         );
       },
     );
