@@ -11,4 +11,7 @@ class Routes {
 
   static const homepage = '/homepage';
 
+  static const ticket = '/ticket';
+  static const ticket2 = '/ticket2';
+
 }

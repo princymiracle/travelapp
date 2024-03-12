@@ -158,7 +158,7 @@ class LoginScreen extends StatelessWidget {
                                       Text(AppString.Google,
                                         style: CustomStyles.textStyle(
                                           fontWeight: FontWeight.bold,
-                                          fontColor: CustomColors.black,
+                                          fontColor: CustomColors.Cblack,
                                           fontSize: 15.sp,
                                         ),
                                       ),
@@ -184,7 +184,7 @@ class LoginScreen extends StatelessWidget {
                                       Text(AppString.Facebook,
                                         style: CustomStyles.textStyle(
                                           fontWeight: FontWeight.bold,
-                                          fontColor: CustomColors.black,
+                                          fontColor: CustomColors.Cblack,
                                           fontSize: 15.sp,
                                         ),
                                       ),

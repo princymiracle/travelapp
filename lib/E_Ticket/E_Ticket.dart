@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sizer/flutter_sizer.dart';
+import 'package:get/get.dart';
 import 'package:travelapp/Constant/Image_Path.dart';
 import 'package:travelapp/Custom_Elements/Elements/Custom_AppBar.dart';
 import 'package:travelapp/Custom_Elements/Elements/Custom_Container.dart';
@@ -7,6 +8,7 @@ import 'package:travelapp/Custom_Elements/Elements/Custom_Styles.dart';
 
 import '../Constant/AppString.dart';
 import '../Custom_Elements/Elements/Custom_Color.dart';
+import '../Routes/Routes.dart';
 
 class ETicket extends StatelessWidget {
   const ETicket({super.key});
@@ -161,7 +163,7 @@ class ETicket extends StatelessWidget {
                   ),
                 ),
                 InkWell(
-                  // onTap: () => Get.toNamed(Routes.registersucces),
+                   onTap: () => Get.toNamed(Routes.ticket2),
                   child: CustomContainer(
                     height: 6.5.h,
                     width: 85.w,

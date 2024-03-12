@@ -27,7 +27,9 @@ class MyApp extends StatelessWidget {
           // getPages: Screens.routes,
           // initialRoute: Routes.splashScreen,
            //home: DateScreen(),
-          home: ETicket(),
+         // home: ETicket(),
+          getPages: Screens.routes,
+          initialRoute: Routes.ticket,
         );
       },
     );

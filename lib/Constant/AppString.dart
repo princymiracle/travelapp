@@ -57,6 +57,22 @@ class AppString {
   static const snf3 = "F-3";
   static const downloadeticket = "DOWNLOAD E-TICKET";
 
+  static const all = "All";
+  static const completed = "Completed";
+  static const refunded = "Refunded";
+
+  static const ionair = "Lion Air";
+  static const ompleted = "Completed";
+  static const t900PM = "9:00 PM";
+  static const YA = "Y|A";
+  static const LOP = "LOP";
+  static const Economy = "Economy";
+  static const Direct = "Direct";
+  static const ticket = "E-Ticket";
+  static const refund = "Refund";
+
+
+
 
 
 

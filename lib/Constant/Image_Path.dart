@@ -8,6 +8,8 @@ class ImagePath {
   static const register = "assets/images/Register.png";
 
   static const qr = "assets/images/QrCode.png";
+  static const eticket = "assets/images/Eticket.png";
+  static const circle = "assets/images/circle.png";
 
 
   static const flight = "assets/images/flight.png";

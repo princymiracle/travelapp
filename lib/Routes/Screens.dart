@@ -1,4 +1,6 @@
 import 'package:get/get.dart';
+import 'package:travelapp/E_Ticket/E_Ticket.dart';
+import 'package:travelapp/E_Ticket/E_Ticket2.dart';
 import 'package:travelapp/Screens/CreateNewPassword_Screen.dart';
 import 'package:travelapp/Screens/Forget_Password.dart';
 import 'package:travelapp/Screens/Forget_Password_otp.dart';
@@ -23,6 +25,9 @@ class Screens {
     GetPage(name: Routes.registersucces, page: () => RegisterSucces(),),
 
     GetPage(name: Routes.homepage, page: () => HomePage(),),
+
+    GetPage(name: Routes.ticket, page: () => ETicket(),),
+    GetPage(name: Routes.ticket2, page: () => ETicket2(),),
 
   ];
 }
