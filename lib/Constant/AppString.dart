@@ -35,6 +35,29 @@ class AppString {
   static const congratulation = "congratulation! your account already created.";
   static const gotohomepage = "GO TO HOMEPAGE";
 
+  //e-ticket Page
+  static const eticket = "E-Ticket";
+  static const ticketdetail = "Ticket Detail";
+  static const sep2023 = "2 Sep 2023";
+  static const h30m = "1h 30m";
+  static const t900900 = "9:00- 9:00";
+  static const lionair = "Lion Air";
+  static const YogyakartaYA = "Yogyakarta(YA)";
+  static const BandaraJuanda = "Bandara Juanda";
+  static const LombokLOP = "Lombok(LOP)";
+  static const passengerdetail = "Passenger Detail";
+  static const passenger1 = "Passenger 1";
+  static const name = "Name";
+  static const Jamesbrown = "James Brown";
+  static const IdentityNumber = "Identity Number";
+  static const pn = "728130281342";
+  static const ticketnumber = "Ticket Number";
+  static const t1485ft8 = "1485FT8";
+  static const seatnumber = "Seat Number";
+  static const snf3 = "F-3";
+  static const downloadeticket = "DOWNLOAD E-TICKET";
+
+
 
 
 }

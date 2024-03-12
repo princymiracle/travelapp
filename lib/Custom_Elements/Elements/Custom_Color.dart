@@ -13,5 +13,7 @@ class CustomColors {
   static const signuptext = Color(0xFF3C3C43);
   static const signuptext1 = Color(0xFF5496FF);
   static const CWhite = Color(0xFFFFFFFF);
+  static const Cbordercolor = Color(0xFFABB2B9);
+  static const contcolor = Color(0xFFF3F4F6);
 
 }
