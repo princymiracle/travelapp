@@ -31,9 +31,9 @@ class MyApp extends StatelessWidget {
           // getPages: Screens.routes,
           // initialRoute: Routes.splashScreen,
            //home: DateScreen(),
-          home: ETicket2(),
-          // getPages: Screens.routes,
-          // initialRoute: Routes.ticket,
+         // home: ETicket2(),
+          getPages: Screens.routes,
+          initialRoute: Routes.ticket,
         );
       },
     );
