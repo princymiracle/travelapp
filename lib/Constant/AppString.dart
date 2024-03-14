@@ -70,6 +70,22 @@ class AppString {
   static const Direct = "Direct";
   static const ticket = "E-Ticket";
   static const refund = "Refund";
+  static const alreadyrefunded = "Already Refunded";
+
+  static const credit = "credit / debit card";
+  static const net  = "Net Banking";
+  static const UPI  = "UPI Payment";
+  static const wallet  = "Wallet";
+  static const estimated   = "Estimated Refuted";
+  static const r$   = "\$2,3600";
+  static const brefund   = "REFUND";
+
+  static const refundre  = "Your Refund Request Completed!";
+  static const ticketche  = "You can check your e-Ticket by clicking the";
+  static const button  = "button below.";
+  static const backto   = "BACK TO HOME";
+  static const check    = "CHECK PROCESS";
+
 
 
 

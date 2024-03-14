@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_sizer/flutter_sizer.dart';
 import 'package:get/get.dart';
 import 'E_Ticket/E_Ticket.dart';
+import 'E_Ticket/E_Ticket2.dart';
+import 'E_Ticket/E_Ticket_Payment.dart';
+import 'E_Ticket/Payment_Page.dart';
+import 'E_Ticket/Refund.dart';
 import 'Routes/Routes.dart';
 import 'Routes/Screens.dart';
 import 'Select_Flights.dart';
@@ -27,9 +31,9 @@ class MyApp extends StatelessWidget {
           // getPages: Screens.routes,
           // initialRoute: Routes.splashScreen,
            //home: DateScreen(),
-         // home: ETicket(),
-          getPages: Screens.routes,
-          initialRoute: Routes.ticket,
+          home: ETicket2(),
+          // getPages: Screens.routes,
+          // initialRoute: Routes.ticket,
         );
       },
     );

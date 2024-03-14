@@ -14,4 +14,5 @@ class ImagePath {
 
   static const flight = "assets/images/flight.png";
   static const lion = "assets/images/lion.png";
+  static const refund = "assets/images/Refund.png";
 }
