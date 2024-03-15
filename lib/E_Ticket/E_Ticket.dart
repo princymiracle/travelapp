@@ -34,7 +34,7 @@ class _ETicketState extends State<ETicket> {
                 Padding(
                   padding:  EdgeInsets.only(top: 2.h,bottom: 4.h),
                   child: CustomContainer(
-                    height: 33.h,
+                    height: 31.h,
                     width: double.infinity,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
@@ -92,7 +92,7 @@ class _ETicketState extends State<ETicket> {
                 Padding(
                   padding:  EdgeInsets.only(top: 2.h,bottom: 8.h),
                   child: CustomContainer(
-                    height: 27.h,
+                    height: 25.h,
                     width: double.infinity,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),

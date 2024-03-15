@@ -14,5 +14,6 @@ class Routes {
   static const ticket = '/ticket';
   static const ticket2 = '/ticket2';
   static const payment = '/payment';
+  static const refund = '/refund';
 
 }

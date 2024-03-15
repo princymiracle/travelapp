@@ -8,6 +8,7 @@ import 'package:travelapp/Screens/Home/Home_Page.dart';
 import 'package:travelapp/Screens/RegisterSucces.dart';
 import 'package:travelapp/Screens/Signup_Screen.dart';
 import '../E_Ticket/Payment_Page.dart';
+import '../E_Ticket/Refund.dart';
 import '../Screens/Login_Screen.dart';
 import '../Screens/Splash_2.dart';
 import '../Screens/Splash_Screen.dart';
@@ -30,6 +31,7 @@ class Screens {
     GetPage(name: Routes.ticket, page: () => ETicket(),),
     GetPage(name: Routes.ticket2, page: () => ETicket2(),),
     GetPage(name: Routes.payment, page: () => PaymentPage(),),
+    GetPage(name: Routes.refund, page: () => RefundPage(),),
 
   ];
 }
