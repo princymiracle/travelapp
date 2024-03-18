@@ -16,4 +16,9 @@ class Routes {
   static const payment = '/payment';
   static const refund = '/refund';
 
+  static const profile = '/profile';
+  static const profileinfo = '/profileinfo';
+  static const termsservice = '/termsservice';
+  static const helpcenter = '/helpcenter';
+
 }

@@ -86,10 +86,69 @@ class AppString {
   static const backto   = "BACK TO HOME";
   static const check    = "CHECK PROCESS";
 
+  // Profile
+  static const profile = "Profile";
+  static const jamesbrown = "James Brown";
+  static const gmail = "jamesbrwn@mail.com";
+  static const settings = "Settings";
+  static const personalinfo = "Personal Info";
+  static const others = "Others";
+  static const termsofservice = "Terms of Service";
+  static const language = "Language";
+  static const customerservice = "Customer Service";
+  static const helpcenter = "Help Center";
 
+  static const perinfo = "Personal Info";
+  static const editProfile = "Edit Profile";
+  static const phonenub = "+1 3949625372";
+  static const pinfilocation = "1158 Anggrek Ountrie, Street \n No.123 Sooehat (123456)";
 
+  static const terms = "Terms Of Service";
 
+  //Help Center
+  static const categories = "Categories";
+  static const FAQ = "FAQ";
+  static const booking = "Booking";
+  static const payment = "Payment";
+  static const fights = "Fights";
+
+  //FAQ
+  static const populartopics = "Popular Topics";
 
 
 
 }
+
+
+List data = [
+  {
+    "name":"Lion Air",
+    "status":"Completed",
+    "startTime" : DateTime.now().subtract(Duration(hours: 28)),
+    "sendTime" : DateTime.now(),
+    "startCity" : "Y/A",
+    "endCity" : "LOP",
+    "isEconomy" : true,
+    "refunded" : true,
+  },
+  {
+    "name":"Lion Air",
+    "status":"Refunded",
+    "startTime" : DateTime.now().subtract(Duration(hours: 28)),
+    "sendTime" : DateTime.now(),
+    "startCity" : "Y/A",
+    "endCity" : "LOP",
+    "isEconomy" : true,
+    "refunded" : true,
+  },
+  {
+    "name":"Lion Air",
+    "status":"Completed",
+    "startTime" : DateTime.now().subtract(Duration(hours: 28)),
+    "sendTime" : DateTime.now(),
+    "startCity" : "Y/A",
+    "endCity" : "LOP",
+    "isEconomy" : true,
+    "refunded" : true,
+  },
+];

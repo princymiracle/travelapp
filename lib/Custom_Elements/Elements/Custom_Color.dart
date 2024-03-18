@@ -20,5 +20,6 @@ class CustomColors {
   static const border = Color(0xFF808B96);
   static const BText3 = Color(0xFFF6285F);
   static const Bbg3 = Color(0xFFFFF5F8);
+  static const profiletext = Color(0xFF9CA3AF);
 
 }

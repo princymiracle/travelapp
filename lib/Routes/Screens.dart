@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 import 'package:travelapp/E_Ticket/E_Ticket.dart';
 import 'package:travelapp/E_Ticket/E_Ticket2.dart';
+import 'package:travelapp/Profile/Help_Center.dart';
 import 'package:travelapp/Screens/CreateNewPassword_Screen.dart';
 import 'package:travelapp/Screens/Forget_Password.dart';
 import 'package:travelapp/Screens/Forget_Password_otp.dart';
@@ -9,6 +10,9 @@ import 'package:travelapp/Screens/RegisterSucces.dart';
 import 'package:travelapp/Screens/Signup_Screen.dart';
 import '../E_Ticket/Payment_Page.dart';
 import '../E_Ticket/Refund.dart';
+import '../Profile/Profile.dart';
+import '../Profile/ProfileInfo.dart';
+import '../Profile/terms_service.dart';
 import '../Screens/Login_Screen.dart';
 import '../Screens/Splash_2.dart';
 import '../Screens/Splash_Screen.dart';
@@ -32,6 +36,11 @@ class Screens {
     GetPage(name: Routes.ticket2, page: () => ETicket2(),),
     GetPage(name: Routes.payment, page: () => PaymentPage(),),
     GetPage(name: Routes.refund, page: () => RefundPage(),),
+
+    GetPage(name: Routes.profile, page: () => ProfilePage(),),
+    GetPage(name: Routes.profileinfo, page: () => ProfilrInfo(),),
+    GetPage(name: Routes.termsservice, page: () => TermsService(),),
+    GetPage(name: Routes.helpcenter, page: () => HelpCenter(),),
 
   ];
 }

@@ -6,6 +6,8 @@ import 'E_Ticket/E_Ticket2.dart';
 import 'E_Ticket/E_Ticket_Payment.dart';
 import 'E_Ticket/Payment_Page.dart';
 import 'E_Ticket/Refund.dart';
+import 'Profile/Profile.dart';
+import 'Profile/terms_service.dart';
 import 'Routes/Routes.dart';
 import 'Routes/Screens.dart';
 import 'Select_Flights.dart';
@@ -31,9 +33,11 @@ class MyApp extends StatelessWidget {
           // getPages: Screens.routes,
           // initialRoute: Routes.splashScreen,
            //home: DateScreen(),
-         // home: ETicket2(),
+        //  home: ProfilePage(),
+          // getPages: Screens.routes,
+          // initialRoute: Routes.ticket,
           getPages: Screens.routes,
-          initialRoute: Routes.ticket,
+          initialRoute: Routes.profile,
         );
       },
     );
