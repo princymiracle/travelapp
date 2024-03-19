@@ -20,5 +20,9 @@ class Routes {
   static const profileinfo = '/profileinfo';
   static const termsservice = '/termsservice';
   static const helpcenter = '/helpcenter';
+  static const faq = '/faq';
+  static const booking = '/booking';
+  static const Paymenthelp = '/paymenthelp';
+  static const fights = '/fights';
 
 }

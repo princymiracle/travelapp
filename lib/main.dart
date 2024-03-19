@@ -34,10 +34,11 @@ class MyApp extends StatelessWidget {
           // initialRoute: Routes.splashScreen,
            //home: DateScreen(),
         //  home: ProfilePage(),
-          // getPages: Screens.routes,
-          // initialRoute: Routes.ticket,
           getPages: Screens.routes,
-          initialRoute: Routes.profile,
+          initialRoute: Routes.ticket2,
+          // getPages: Screens.routes,
+          // initialRoute: Routes.profile,
+         // home: ETicket2(),
         );
       },
     );

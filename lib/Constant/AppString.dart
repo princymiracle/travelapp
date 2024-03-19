@@ -106,14 +106,79 @@ class AppString {
   static const terms = "Terms Of Service";
 
   //Help Center
+  static const search = "Search";
   static const categories = "Categories";
   static const FAQ = "FAQ";
   static const booking = "Booking";
   static const payment = "Payment";
   static const fights = "Fights";
 
-  //FAQ
   static const populartopics = "Popular Topics";
+
+  // FAQ Que.Ans.
+  static const que1 = "What documents do I need to board a flight?";
+  static const aq1 = "*  Government-issued ID";
+  static const aq2 = "*  Boarding Pass";
+  static const aq3 = "*  Visa";
+
+  static const que2 = "How far in advance should I book my flight?";
+  static const aq21 = "*  Domestic Flights";
+  static const aq22 = "*  International Flights";
+  static const aq23 = "*  Peak Travel Seasons";
+
+  static const que3 = "What can I bring in my carry-on luggage?";
+  static const aq31 = "*  Essential Documents";
+  static const aq32 = "*  Medications";
+  static const aq33 = "*  Travel Documents";
+
+  // Booking Que.ans
+  static const bque1 = "Can I change or cancel my flight?";
+  static const ba1 = "*  Changing Your Flight";
+  static const ba2 = "*  Canceling Your Flight";
+  static const ba3 = "*  Refundable Tickets";
+
+  static const bque2 = "What should I do if my flight is delayed or canceled?";
+  static const ba21 = "*  Stay Informed";
+  static const ba22 = "*  Contact the Airline";
+  static const ba23 = "*  Know Your Rights";
+
+  static const bque3 = "Do I need travel insurance for my flight?";
+  static const ba31 = "*  Emergency Medical Coverage";
+  static const ba32 = "*  Baggage and Personal   \n   Belongings Coverage";
+  static const ba33 = "*  Financial Protection";
+
+  // Payment Que.ans
+  static const pque1 = "How early should I arrive at the airport before my flight?";
+  static const pa1 = "*  Domestic Flights";
+  static const pa2 = "*  International Flights";
+  static const pa3 = "*  Boarding Time";
+
+  static const pque2 ="Can I request special assistance at the airport?";
+  static const pa21 = "*  Contact the Airline";
+  static const pa22 = "*  Specify Your Needs";
+  static const pa23 = "*  Arrival at the Airport";
+
+  static const pque3 = "What happens if I miss my flight?";
+  static const pa31 = "*  Contact the Airline";
+  static const pa32 = "*  Rebooking Options";
+  static const pa33 = "*  Standby Status";
+
+  // Fights Que.ans
+  static const fque1 = "What should I do if my flight is delayed or canceled while using the Travel App?";
+  static const fa1 = "*  Stay Informed";
+  static const fa2 = "*  Contact the Airline";
+  static const fa3 = "*  Know Your Rights";
+
+  static const fque2 ="Can I request special assistance at the airport?";
+  static const fa21 = "*  Contact the Airline";
+  static const fa22 = "*  Specify Your Needs";
+  static const fa23 = "*  Arrival at the Airport";
+
+  static const fque3 = "What happens if I miss my flight?";
+  static const fa31 = "*  Contact the Airline";
+  static const fa32 = "*  Rebooking Options";
+  static const fa33 = "*  Standby Status";
+
 
 
 

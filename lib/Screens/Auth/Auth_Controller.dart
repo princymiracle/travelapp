@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class AuthController extends GetxController {
-
+  RxInt selectedFilterIndex =0.obs;
   // Log in
   TextEditingController logemailController = TextEditingController();
   TextEditingController logpassController = TextEditingController();

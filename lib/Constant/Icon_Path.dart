@@ -14,4 +14,9 @@ class IconPath {
   static const gmail = "assets/Icon/Gmail.png";
   static const phone = "assets/Icon/phone.png";
   static const location = "assets/Icon/Location.png";
+
+  static const FAQ = "assets/Icon/FAQ.png";
+  static const Booking = "assets/Icon/Booking.png";
+  static const Payment = "assets/Icon/Payment.png";
+  static const Fights = "assets/Icon/Fights.png";
 }
