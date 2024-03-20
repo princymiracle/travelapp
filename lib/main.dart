@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_sizer/flutter_sizer.dart';
 import 'package:get/get.dart';
-import 'E_Ticket/E_Ticket.dart';
-import 'E_Ticket/E_Ticket2.dart';
-import 'E_Ticket/E_Ticket_Payment.dart';
-import 'E_Ticket/Payment_Page.dart';
-import 'E_Ticket/Refund.dart';
-import 'Profile/Profile.dart';
-import 'Profile/terms_service.dart';
-import 'Routes/Routes.dart';
-import 'Routes/Screens.dart';
-import 'Select_Flights.dart';
+import 'package:sizer/sizer.dart';
+import 'package:travelapp/BottamNavigationbar/bottomnavigationbar.dart';
+import 'package:travelapp/bttomsheet/bttomsheet.dart';
+
+import 'package:travelapp/route/routes.dart';
+import 'package:travelapp/route/screen.dart';
+import 'BottamNavigationbar/DiscountPage/VoucherDetails.dart';
+import 'BottamNavigationbar/HomePage/BookTicketPage/SuccessFullyPage.dart';
+import 'BottamNavigationbar/TicketPage/RefundPage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,26 +20,29 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return FlutterSizer(
-      builder: (context, orientation, screenType) {
-        return GetMaterialApp(
+    return Sizer(
+      builder: (context, orientation, deviceType) {
+        return  GetMaterialApp(
+          title: 'Flutter Demo',
           debugShowCheckedModeBanner: false,
-          title: 'Flutter Sizer Example',
           theme: ThemeData(
-            primarySwatch: Colors.blue,
+            textTheme:Theme.of(context).textTheme,
+            fontFamily: "PlusJakartaSans",
           ),
-          // getPages: Screens.routes,
-          // initialRoute: Routes.splashScreen,
-           //home: DateScreen(),
-        //  home: ProfilePage(),
-          getPages: Screens.routes,
-          initialRoute: Routes.ticket2,
-          // getPages: Screens.routes,
-          // initialRoute: Routes.profile,
-         // home: ETicket2(),
+          getPages:Screens.routes,
+          initialRoute: Routes.splashScreen,
+         /*home: RefundPage(),*/
         );
       },
     );
+   /* return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home: BotomNavigationBar(),
+    );*/
   }
 }
 
