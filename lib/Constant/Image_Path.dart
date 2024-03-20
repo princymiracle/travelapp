@@ -11,6 +11,14 @@ class ImagePath {
   static const eticket = "assets/images/Eticket.png";
   static const circle = "assets/images/circle.png";
 
+  // Language
+  static const india = "assets/images/img_india.png";
+  static const englishus = "assets/images/img_englishus.png";
+  static const english = "assets/images/img_english.png";
+  static const italiano = "assets/images/img_italiano.png";
+  static const bahasaindonesia = "assets/images/img_bahasaindonesia.png";
+  static const deutsch = "assets/images/img_deutsch.png";
+
 
   static const flight = "assets/images/flight.png";
   static const lion = "assets/images/lion.png";

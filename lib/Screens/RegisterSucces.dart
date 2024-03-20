@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sizer/flutter_sizer.dart';
+import 'package:get/get.dart';
 
 import '../Constant/AppString.dart';
 import '../Constant/Image_Path.dart';
 import '../Custom_Elements/Elements/Custom_Color.dart';
 import '../Custom_Elements/Elements/Custom_Container.dart';
 import '../Custom_Elements/Elements/Custom_Styles.dart';
+import '../Routes/Routes.dart';
 
 class RegisterSucces extends StatelessWidget {
   const RegisterSucces({super.key});
@@ -56,7 +58,7 @@ class RegisterSucces extends StatelessWidget {
                   ),
                   SizedBox(height: 3.h,),
                   InkWell(
-                   // onTap: () => Get.toNamed(Routes.registersucces),
+                    onTap: () => Get.toNamed(Routes.homepage),
                     child: CustomContainer(
                       height: 6.5.h,
                       width: 85.w,

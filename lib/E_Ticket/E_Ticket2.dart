@@ -667,6 +667,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sizer/flutter_sizer.dart';
 import 'package:get/get.dart';
+import 'package:razorpay_web/razorpay_web.dart';
 import 'package:travelapp/Constant/AppString.dart';
 
 import '../Constant/Image_Path.dart';
@@ -683,6 +684,43 @@ class ETicket2 extends StatefulWidget {
 }
 
 class _ETicket2State extends State<ETicket2> {
+
+  var  _razorpay = Razorpay();
+  var options;
+
+  @override
+  void initState() {
+    _razorpay.on(Razorpay.EVENT_PAYMENT_SUCCESS, _handlePaymentSuccess);
+    _razorpay.on(Razorpay.EVENT_PAYMENT_ERROR, _handlePaymentError);
+    _razorpay.on(Razorpay.EVENT_EXTERNAL_WALLET, _handleExternalWallet);
+
+    options = {
+      'key': 'rzp_test_1DP5mmOlF5G5ag',
+      'amount': 100 * 100,
+      'name': 'Sai Gopi YT',
+      'description': 'Course Free',
+      'prefill': {'contact': '7981686394', 'email': 'test@razorpay.com'}
+    };
+
+    super.initState();
+  }
+
+  void _handlePaymentSuccess(PaymentSuccessResponse response) {
+    // Do something when payment succeeds
+    Get.toNamed(Routes.refund);
+    // print("_handlePaymentSuccess payment is success +  ${ response.paymentId}" );
+  }
+
+  void _handlePaymentError(PaymentFailureResponse response) {
+    // Do something when payment fails
+    print("_handlePaymentError payment is failed  +${response.message}");
+  }
+
+  void _handleExternalWallet(ExternalWalletResponse response) {
+    // Do something when an external wallet was selected
+  }
+
+
   int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
@@ -747,40 +785,6 @@ class _ETicket2State extends State<ETicket2> {
                       ],
                     ),
                   ),
-
-                  // Column(
-                  //   children: [
-                  //     selectedIndex == 0
-                  //         ? Column(
-                  //         children: [
-                  //          ContainerWidget(),
-                  //          SizedBox(height: 4.h,),
-                  //          ContainerWidget2(),
-                  //          SizedBox(height: 4.h,),
-                  //          ContainerWidget(),
-                  //          SizedBox(height: 4.h,),
-                  //          ContainerWidget2(),
-                  //       ],
-                  //     ) :
-                  //     selectedIndex == 1 ?Column(
-                  //       children: [
-                  //        ContainerWidget(),
-                  //         SizedBox(height: 4.h,),
-                  //         ContainerWidget(),
-                  //         SizedBox(height: 4.h,),
-                  //         ContainerWidget(),
-                  //         SizedBox(height: 4.h,),
-                  //      ],
-                  //     ) :
-                  //     selectedIndex == 2 ?
-                  //     Column(
-                  //       children: [
-                  //         ContainerWidget2(),
-                  //         SizedBox(height: 4.h,),
-                  //       ],
-                  //     ) : SizedBox(),
-                  //   ],
-                  // ),
                 ],
               ),
             ),
@@ -803,6 +807,7 @@ class _ETicket2State extends State<ETicket2> {
                       ContainerWidget(),
                       SizedBox(height: 4.h,),
                       ContainerWidget2(),
+                      SizedBox(height: 4.h,),
                      ],
                   ) :
                   selectedIndex == 1 ?Column(
@@ -830,6 +835,7 @@ class _ETicket2State extends State<ETicket2> {
                       ContainerWidget2(),
                       SizedBox(height: 4.h,),
                       ContainerWidget2(),
+                      SizedBox(height: 4.h,),
                     ],
                   ) : SizedBox(),
                 ],
@@ -946,10 +952,15 @@ class _ETicket2State extends State<ETicket2> {
                             ],
                           ),
                         ),
-                        child: Center(
-                          child: Text(AppString.refund, style: CustomStyles.textStyle(fontColor: CustomColors.Buttontext,),),
+                        child: InkWell(
+                          onTap: () {
+                            _razorpay.open(options);
+                          },
+                          child: Center(
+                            child: Text(AppString.refund, style: CustomStyles.textStyle(fontColor: CustomColors.Buttontext,),),
+                          ),
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ],

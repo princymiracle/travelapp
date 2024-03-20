@@ -105,6 +105,15 @@ class AppString {
 
   static const terms = "Terms Of Service";
 
+  // Language
+  static const  choose   = "choose your preferred language";
+  static const  india  = "India (in)";
+  static const  englishus  = "English(US)";
+  static const  englishen  = "English (EN)";
+  static const  italiano  = "Italiano";
+  static const  BahasaIndonesia  = "Bahasa Indonesia";
+  static const  deutsch  = "Deutsch";
+
   //Help Center
   static const search = "Search";
   static const categories = "Categories";

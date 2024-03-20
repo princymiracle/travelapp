@@ -114,9 +114,10 @@ class _PaymentPageState extends State<PaymentPage> {
 
 
   @override
-  void initState() {_razorpay.on(Razorpay.EVENT_PAYMENT_SUCCESS, handlePaymentSuccess);
-  _razorpay.on(Razorpay.EVENT_PAYMENT_ERROR, handlePaymentError);
-  _razorpay.on(Razorpay.EVENT_EXTERNAL_WALLET, handleExternalWallet); // TODO: implement initState
+  void initState() {
+    _razorpay.on(Razorpay.EVENT_PAYMENT_SUCCESS, handlePaymentSuccess);
+    _razorpay.on(Razorpay.EVENT_PAYMENT_ERROR, handlePaymentError);
+    _razorpay.on(Razorpay.EVENT_EXTERNAL_WALLET, handleExternalWallet); // TODO: implement initState
   super.initState();
   }
 

@@ -169,7 +169,7 @@ class _ETicketState extends State<ETicket> {
                   ),
                 ),
                 InkWell(
-                  onTap: () => Get.toNamed(Routes.payment),
+                  //onTap: () => Get.toNamed(Routes.payment),
                   child: CustomContainer(
                     height: 6.5.h,
                     width: 85.w,

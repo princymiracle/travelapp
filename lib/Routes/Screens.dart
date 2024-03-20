@@ -38,7 +38,6 @@ class Screens {
 
     GetPage(name: Routes.ticket, page: () => ETicket(),),
     GetPage(name: Routes.ticket2, page: () => ETicket2(),),
-    GetPage(name: Routes.payment, page: () => PaymentPage(),),
     GetPage(name: Routes.refund, page: () => RefundPage(),),
 
     GetPage(name: Routes.profile, page: () => ProfilePage(),),
