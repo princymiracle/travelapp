@@ -71,7 +71,6 @@ return Scaffold(
             BottomNavigationBarItem(
               icon: Image.asset(IconPath.discount,scale: 1,),
               label: "Discount",
-
             ),
 
             BottomNavigationBarItem(

@@ -273,7 +273,6 @@ class TrainPage extends StatelessWidget {
                               fontColor: CustomColors.background,
                               fontSize: 13.sp),
                         ),
-
                         Obx(() => Text(
                           "${controller.selectValue.value}",
                           style: CustomStyles.textStyle(

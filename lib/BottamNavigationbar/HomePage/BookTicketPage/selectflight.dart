@@ -79,7 +79,6 @@ class SelectFlightPage extends StatelessWidget {
                               ],
                             )
                           ],
-
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -103,7 +102,6 @@ class SelectFlightPage extends StatelessWidget {
                                 Text(AppString.lombok1,style: CustomStyles.textStyle(fontColor: CustomColors.textcolor5),),
                               ],
                             ),
-
                           ],
                         ),
                       ],
@@ -131,12 +129,9 @@ class SelectFlightPage extends StatelessWidget {
                   ),
                 ],
               ),
-
             ],
           ),
-
         ),
-
       ],
     );
   }

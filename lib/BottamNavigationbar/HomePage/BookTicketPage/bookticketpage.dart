@@ -1,31 +1,18 @@
-
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:intl/intl.dart';
 import 'package:sizer/sizer.dart';
-import 'package:table_calendar/table_calendar.dart';
 import 'package:travelapp/BottamNavigationbar/HomePage/BookTicketPage/FlightsPage.dart';
 import 'package:travelapp/BottamNavigationbar/HomePage/BookTicketPage/TrainPage.dart';
 import 'package:travelapp/Controller/BookTicketController.dart';
-
-import 'package:travelapp/CustomElements/elements/CustomContiner.dart';
-import 'package:travelapp/CustomElements/elements/CustomRadioButton.dart';
 import 'package:travelapp/CustomElements/elements/CustomStyle.dart';
 import 'package:travelapp/CustomElements/elements/customappbar.dart';
-import 'package:travelapp/constant/IconPath.dart';
-import 'package:travelapp/constant/ImagePath.dart';
 import 'package:travelapp/constant/appstring.dart';
 import 'package:travelapp/model/bannermodel.dart';
-
 import '../../../CustomElements/elements/CustomColor.dart';
-
-
 
 class BookTicketPage extends StatefulWidget {
   const BookTicketPage({super.key,});
-
 
   @override
   State<BookTicketPage> createState() => _BookTicketPageState();
@@ -98,8 +85,6 @@ class _BookTicketPageState extends State<BookTicketPage> with SingleTickerProvid
                           ],
                         ),
                       )
-
-
                     ],
                   ),
                 ),

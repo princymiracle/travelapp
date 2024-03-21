@@ -116,7 +116,7 @@ class HelpCenter extends StatelessWidget {
                                 Text(AppString.fights,)
                               ],
                             ),
-                            Image.asset(IconPath.arrow,),
+                            Image.asset(IconPath.arrow,fit: BoxFit.cover,),
                           ],
                         ),
                       ),

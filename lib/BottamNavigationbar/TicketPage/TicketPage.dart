@@ -80,19 +80,19 @@ class _TicketPageState extends State<TicketPage> {
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(top: 4.h,left: 7.w,right: 7.w,),
+            padding: EdgeInsets.only(top: 7.h,left: 7.w,right: 7.w,),
             child: Container(
               child: Column(
                 children: [
                   Row (
                     children: [
-                      Icon(Icons.arrow_back,color: CustomColors.textcolor,size: 4.5.w,),
+                      Icon(Icons.arrow_back,color: CustomColors.textcolor,size: 5.w,),
                       SizedBox(width: 0.5.h,),
                       Text(AppString.eticket,style: CustomStyles.textStyle(fontColor: CustomColors.textcolor,fontSize: 18.sp,letterspacing: 1),),
                     ],
                   ),
                   Padding(
-                    padding:  EdgeInsets.only(top: 4.h,bottom: 4.h),
+                    padding:  EdgeInsets.only(top: 3.h,bottom: 4.h),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [

@@ -46,7 +46,7 @@ class Screens {
     GetPage(name: Routes.seatspage, page: () => SeatsPage()),
     GetPage(name: Routes.selectflightspage, page: () => SelectFlightPage()),
     GetPage(name: Routes.flightspage1, page: () => Flight_Page()),
-    GetPage(name: Routes.paymentpage, page: () => PaymentPage()),
+   // GetPage(name: Routes.paymentpage, page: () => PaymentPage()),
     GetPage(name: Routes.successfully, page: () => SuccessFullyPage()),
     GetPage(name: Routes.dealspage, page: () => DiscountPage()),
     GetPage(name: Routes.voucherpage, page: () => VoucherDetailsPage()),

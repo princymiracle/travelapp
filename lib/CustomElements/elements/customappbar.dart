@@ -52,7 +52,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                 child: Icon(Icons.arrow_back,size: 25,color: CustomColors.textcolor,)),
           ),
           Padding(padding: EdgeInsets.only(left: 3.w),
-            child: Text(title,style: CustomStyles.textStyle(fontColor: CustomColors.textcolor,fontSize: 15.sp,fontWeight: FontWeight.w900,letterspacing: 1)),
+            child: Text(title,style: CustomStyles.textStyle(fontColor: CustomColors.textcolor,fontSize: 18.sp,fontWeight: FontWeight.w900,letterspacing: 1)),
           ),
         ],
       ),

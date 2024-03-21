@@ -4,8 +4,6 @@ import 'package:sizer/sizer.dart';
 import 'package:travelapp/CustomElements/elements/CustomColor.dart';
 import 'package:travelapp/CustomElements/elements/CustomContiner.dart';
 import 'package:travelapp/CustomElements/elements/CustomStyle.dart';
-import 'package:travelapp/CustomElements/elements/customappbar.dart';
-import 'package:travelapp/constant/ImagePath.dart';
 import 'package:travelapp/constant/appstring.dart';
 import 'package:travelapp/model/dealsmodel.dart';
 import 'package:travelapp/route/routes.dart';
@@ -180,7 +178,6 @@ class DiscountPage extends StatelessWidget {
                                             ],
                                           ),
                                         ),
-
                                       ],
                                     ),
                                   );
@@ -190,7 +187,6 @@ class DiscountPage extends StatelessWidget {
                                   return SizedBox(height: 4.h,);
                                 },
                               ),
-
                           ],
                         ),
                       ),

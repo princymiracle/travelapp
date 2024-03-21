@@ -1,14 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
-import 'package:travelapp/BottamNavigationbar/bottomnavigationbar.dart';
-import 'package:travelapp/bttomsheet/bttomsheet.dart';
-
 import 'package:travelapp/route/routes.dart';
 import 'package:travelapp/route/screen.dart';
-import 'BottamNavigationbar/DiscountPage/VoucherDetails.dart';
-import 'BottamNavigationbar/HomePage/BookTicketPage/SuccessFullyPage.dart';
-import 'BottamNavigationbar/TicketPage/RefundPage.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -31,18 +26,9 @@ class MyApp extends StatelessWidget {
           ),
           getPages:Screens.routes,
           initialRoute: Routes.splashScreen,
-         /*home: RefundPage(),*/
         );
       },
     );
-   /* return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: BotomNavigationBar(),
-    );*/
   }
 }
 

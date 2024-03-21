@@ -7,7 +7,7 @@ class Routes {
   static const seatspage = "/seatspage";
   static const selectflightspage = "/selectflightspage";
   static const flightspage1 = "/flightspage1";
-  static const paymentpage = "/paymentpage";
+//  static const paymentpage = "/paymentpage";
   static const successfully = "/successfully";
   static const dealspage = "/dealspage";
   static const voucherpage = "/voucherpage";

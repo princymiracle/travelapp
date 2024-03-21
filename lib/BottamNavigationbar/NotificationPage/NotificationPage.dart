@@ -29,6 +29,7 @@ class NotificationPage extends StatelessWidget {
               ),
               Container(
                 child: ListView.builder(
+                  physics: NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
                   itemCount: notificationmodel.length,
                   itemBuilder: (context, index) {

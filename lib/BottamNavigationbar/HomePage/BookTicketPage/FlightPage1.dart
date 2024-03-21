@@ -2,8 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:razorpay_flutter/razorpay_flutter.dart';
-
-
 import 'package:sizer/sizer.dart';
 import 'package:travelapp/CustomElements/elements/CustomColor.dart';
 import 'package:travelapp/CustomElements/elements/CustomContiner.dart';
@@ -81,11 +79,8 @@ class _Flight_PageState extends State<Flight_Page> {
     },);
   }
 
-
-
   void _handleExternalWallet(ExternalWalletResponse response) {
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -128,7 +123,7 @@ class _Flight_PageState extends State<Flight_Page> {
                         // amount will be multiple of 100
                         'amount': (int.parse(amountController.text) * 100)
                             .toString(), //So its pay 500
-                        'name': 'Code With Patel',
+                        'name': 'The Miracle IT Solution',
                         'description': 'Demo',
                         'timeout': 300, // in seconds
                         'prefill': {

@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
@@ -7,14 +6,12 @@ import 'package:travelapp/CustomElements/elements/CustomContiner.dart';
 import 'package:travelapp/CustomElements/elements/CustomStyle.dart';
 import 'package:travelapp/constant/appstring.dart';
 import 'package:travelapp/route/routes.dart';
-
 import '../../../Controller/BookTicketController.dart';
 import '../../../CustomElements/elements/CustomColor.dart';
 import '../../../constant/ImagePath.dart';
 
 class FlightsPage extends StatelessWidget {
   FlightsPage({super.key});
-
 
   BookTicketController controller = Get.put(BookTicketController());
 
