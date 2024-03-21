@@ -15,72 +15,72 @@ class SeatsPage extends StatefulWidget {
 
 class _SeatsPageState extends State<SeatsPage> {
 
- var  countSeatLeft = 2*7;
- var  countSeatCenter = 2*7;
- var  countSeatRight = 2*7;
- var listSeatLeft =[];
- var listSeatCenter =[];
- var listSeatRight =[];
+  var  countSeatLeft = 2*7;
+  var  countSeatCenter = 2*7;
+  var  countSeatRight = 2*7;
+  var listSeatLeft =[];
+  var listSeatCenter =[];
+  var listSeatRight =[];
 
- @override
+  @override
   void initState() {
-   initSeatValueToList(listSeatLeft,countSeatLeft,"l");
-   initSeatValueToList(listSeatCenter,countSeatCenter,"c");
-   initSeatValueToList(listSeatRight,countSeatRight,"r");
-   setVisiblitySeat();
+    initSeatValueToList(listSeatLeft,countSeatLeft,"l");
+    initSeatValueToList(listSeatCenter,countSeatCenter,"c");
+    initSeatValueToList(listSeatRight,countSeatRight,"r");
+    setVisiblitySeat();
     super.initState();
   }
 
   initSeatValueToList(List data,count,side){
-   var objectData;
-   for(int i=0;i< count; i++){
+    var objectData;
+    for(int i=0;i< count; i++){
 
-     objectData = {
-       "id":side + "${i+1}",
-       "isfirst": false,
-       "isthird": true,
-       "issecond":false,
-       "isVisible": true,
+      objectData = {
+        "id":side + "${i+1}",
+        "isfirst": false,
+        "isthird": true,
+        "issecond":false,
+        "isVisible": true,
 
 
-     };
-     setState(() {
-       data.add(objectData);
-     });
+      };
+      setState(() {
+        data.add(objectData);
+      });
 
-   }
-   print(data);
+    }
+    print(data);
   }
 
   setVisiblitySeat(){
-   setState(() {
+    setState(() {
 
-   });
+    });
   }
- setSelectedToBooked() {
-   listSeatLeft.forEach((seat) {
-     if (seat["issecond"]) {
-       setState(() {
-         seat["isfirst"] = true;
-       });
-     }
-   });
-   listSeatCenter.forEach((seat) {
-     if (seat["issecond"]) {
-       setState(() {
-         seat["isfirst"] = true;
-       });
-     }
-   });
-   listSeatRight.forEach((seat) {
-     if (seat["issecond"]) {
-       setState(() {
-         seat["isfirst"] = true;
-       });
-     }
-   });
-   //this function to loop every side of seat, from selected to booked, u also can this function to send to u'r serves side
- }
+  setSelectedToBooked() {
+    listSeatLeft.forEach((seat) {
+      if (seat["issecond"]) {
+        setState(() {
+          seat["isfirst"] = true;
+        });
+      }
+    });
+    listSeatCenter.forEach((seat) {
+      if (seat["issecond"]) {
+        setState(() {
+          seat["isfirst"] = true;
+        });
+      }
+    });
+    listSeatRight.forEach((seat) {
+      if (seat["issecond"]) {
+        setState(() {
+          seat["isfirst"] = true;
+        });
+      }
+    });
+    //this function to loop every side of seat, from selected to booked, u also can this function to send to u'r serves side
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -111,7 +111,7 @@ class _SeatsPageState extends State<SeatsPage> {
                       ],
                     ),
                   ),
-               /*   SizedBox(width: 28.w,),*/
+                  /*   SizedBox(width: 28.w,),*/
                   Container(
 
                     child: Row(
@@ -130,7 +130,7 @@ class _SeatsPageState extends State<SeatsPage> {
                       ],
                     ),
                   ),
-                    /*      SizedBox(width: 28.w,),*/
+                  /*      SizedBox(width: 28.w,),*/
                   Container(
                     child: Row(
                       children: [
@@ -151,24 +151,26 @@ class _SeatsPageState extends State<SeatsPage> {
                 ],
               ),
             ),
-          /*  SizedBox(height: 6.h,),*/
+            /*  SizedBox(height: 6.h,),*/
             Expanded(
-              child: Container(
+              child: SingleChildScrollView(
+                child: Container(
 
-                margin: EdgeInsets.symmetric(horizontal: 3.w),
-               /* height: 100,*/
-                width: MediaQuery.of(context).size.width,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Expanded(child: widgetSeat(listSeatLeft,false),),
-                    SizedBox(width: 5.w,),
-                    Expanded(child: widgetSeat(listSeatCenter,true),),
-                    SizedBox(width: 5.w,),
-                    Expanded(child: widgetSeat(listSeatRight,false),),
+                    margin: EdgeInsets.symmetric(horizontal: 3.w),
+                    /* height: 100,*/
+                    width: MediaQuery.of(context).size.width,
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Expanded(child: widgetSeat(listSeatLeft,false),),
+                        SizedBox(width: 5.w,),
+                        Expanded(child: widgetSeat(listSeatCenter,true),),
+                        SizedBox(width: 5.w,),
+                        Expanded(child: widgetSeat(listSeatRight,false),),
 
-                  ],
-                )
+                      ],
+                    )
+                ),
               ),
             ),
             SizedBox(height: 10.h,),
@@ -204,12 +206,12 @@ class _SeatsPageState extends State<SeatsPage> {
       ),
     );
   }
- Widget widgetSeat(List dataSeat,bool isCenter){
-   return Container(
-     width: 15.w,
-    child: GridView.builder(
+  Widget widgetSeat(List dataSeat,bool isCenter){
+    return Container(
+      width: 15.w,
+      child: GridView.builder(
 
-      shrinkWrap: true,
+        shrinkWrap: true,
 
         physics: NeverScrollableScrollPhysics(
 
@@ -221,34 +223,34 @@ class _SeatsPageState extends State<SeatsPage> {
           crossAxisSpacing: 1.w,
         ),
         itemBuilder: (context, index) {
-         return Visibility(
-           visible: dataSeat[index]["isVisible"],
-           child: GestureDetector(
-             onTap: () {
-               setState(() {
-                 dataSeat[index]["issecond"] =
-                     !dataSeat[index]["issecond"];
-               });
-             },
-             child: Container(
-               margin: EdgeInsets.all(5),
-               height: 6.h,
-               width: 6.w,
-               decoration: BoxDecoration(
-                 color: dataSeat[index]["isfirst"]
-                     ? Color(0xfff0f2ed)
-                     : dataSeat[index]["issecond"]?
-                 Color(0xff5495FF): Color(0xfff0f2ed),
-                 borderRadius: BorderRadius.circular(5),
+          return Visibility(
+            visible: dataSeat[index]["isVisible"],
+            child: GestureDetector(
+              onTap: () {
+                setState(() {
+                  dataSeat[index]["issecond"] =
+                  !dataSeat[index]["issecond"];
+                });
+              },
+              child: Container(
+                margin: EdgeInsets.all(5),
+                height: 6.h,
+                width: 6.w,
+                decoration: BoxDecoration(
+                  color: dataSeat[index]["isfirst"]
+                      ? Color(0xfff0f2ed)
+                      : dataSeat[index]["issecond"]?
+                  Color(0xff5495FF): Color(0xfff0f2ed),
+                  borderRadius: BorderRadius.circular(5),
 
-               ),
+                ),
 
-             ),
-           ),
-         );
+              ),
+            ),
+          );
         },),
-   );
- }
+    );
+  }
 }
 
 

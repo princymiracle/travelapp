@@ -223,8 +223,8 @@ class TrainPage extends StatelessWidget {
                                 height: 2.h,
                                 color: CustomColors.iconcolor2,
                               ),
-
                               Container(
+                                height: 38.h,
                                 child: ListView.builder(
                                   itemCount: controller.list.length,
                                   shrinkWrap: true,
@@ -293,7 +293,7 @@ class TrainPage extends StatelessWidget {
                 flex: 1,
                 child: CustomContiner(
                   padding: EdgeInsets.only(
-                      top: 0.7.h, left: 5.w, right: 5.w),
+                      top: 0.7.h, left: 3.w, right: 3.w),
                   height: 12.h,
                   width: 7.w,
                   decoration: BoxDecoration(

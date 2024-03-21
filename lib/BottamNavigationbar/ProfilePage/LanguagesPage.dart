@@ -39,7 +39,7 @@ class LanguagesPage extends StatelessWidget {
                 child: Row(
                   children: [
                     InkWell(
-                      onTap: () => Get.back(),
+                        onTap: () => Get.back(),
 
                         child: Icon(Icons.arrow_back,color: CustomColors.textcolor,size: 3.h)),
                     Column(
@@ -53,11 +53,11 @@ class LanguagesPage extends StatelessWidget {
                 ),
               ),
               ),
-              Padding(padding: EdgeInsets.only(top: 4.h,left: 7.w,right: 7.w),
+              Padding(padding: EdgeInsets.only(top: 3.h,left: 7.w,right: 7.w),
                 child: Column(
                   children: [
                     Container(
-                      height: 5.h,
+                      height: 8.h,
                       child: TextFormField(
                         controller: searchFlightController.searchController,
                         decoration: InputDecoration(
@@ -96,7 +96,7 @@ class LanguagesPage extends StatelessWidget {
                             itemCount: languagemodel.length,
                             itemBuilder: (context, index) {
                               return Container(
-                                height: 6.5.h,
+                                height: 8.h,
                                 width: double.infinity,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(13),

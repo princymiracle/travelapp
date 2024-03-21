@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-import 'package:razorpay_web/razorpay_web.dart';
+import 'package:razorpay_flutter/razorpay_flutter.dart';
+
 
 import 'package:sizer/sizer.dart';
 

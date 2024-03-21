@@ -224,6 +224,7 @@ class FlightsPage extends StatelessWidget {
                                 color: CustomColors.iconcolor2,
                               ),
                               Container(
+                                height: 38.h,
                                 child: ListView.builder(
                                   itemCount: controller.list.length,
                                   shrinkWrap: true,
