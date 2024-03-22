@@ -1,16 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 import 'package:travelapp/CustomElements/elements/CustomColor.dart';
 import 'package:travelapp/CustomElements/elements/CustomContiner.dart';
 import 'package:travelapp/CustomElements/elements/CustomStyle.dart';
-
 import 'package:travelapp/constant/ImagePath.dart';
 import 'package:travelapp/route/routes.dart';
 import '../Constant/AppString.dart';
-
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -31,40 +28,40 @@ class SplashScreen extends StatelessWidget {
                   children: [
                     Text(AppString.Lets,
                       style: CustomStyles.textStyle(
-                        fontSize: 19.sp,
+                        fontSize: 20.sp,
                         fontColor: CustomColors.spltext,
                       ),
                     ),
                     // SizedBox(height: 1.h,),
                     Text(AppString.Explore,
                       style: CustomStyles.textStyle(
-                        fontSize: 24.sp,
+                        fontSize: 25.sp,
                         fontColor: CustomColors.spltext,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     Text(AppString.TheWorld,
                       style: CustomStyles.textStyle(
-                        fontSize: 18.sp,
+                        fontSize: 19.sp,
                         fontColor: CustomColors.spltext,
                       ),
                     ),
                     SizedBox(height: 2.h,),
                     Text(AppString.lorem,
                       style: CustomStyles.textStyle(
-                        fontSize: 10.sp,
+                        fontSize: 11.sp,
                         fontColor: CustomColors.spltext,
                       ),
                     ),
                     Text(AppString.elit,
                       style: CustomStyles.textStyle(
-                        fontSize: 10.sp,
+                        fontSize: 11.sp,
                         fontColor: CustomColors.spltext,
                       ),
                     ),
                     Text(AppString.massa,
                       style: CustomStyles.textStyle(
-                        fontSize: 10.sp,
+                        fontSize: 11.sp,
                         fontColor: CustomColors.spltext,
                       ),
                     ),

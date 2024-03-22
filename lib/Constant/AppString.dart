@@ -38,6 +38,7 @@ class AppString{
    static const first     = "First";
    static const pax     = "Pax";
    static const searchf    = "SEARCH FLIGHT ";
+   static const searchtrain    = "SEARCH TRAIN ";
    static const  business   = "Business";
    static const Premium1    = "Premium Economy";
    static const business1    = "Business/First ";
