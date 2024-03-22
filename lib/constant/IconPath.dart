@@ -1,4 +1,3 @@
-
 class IconPath{
   static const discount = "assets/icons/icon_discount.png";
   static const clock = "assets/icons/icon_clock.png";

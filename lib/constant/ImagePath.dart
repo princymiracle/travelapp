@@ -1,4 +1,3 @@
-
 class ImagePath{
   static const women = "assets/images/img_women.png";
   static const arrow = "assets/images/img_arrow.png";
@@ -74,8 +73,6 @@ class ImagePath{
   static const eticket = "assets/images/img_eticekt.png";
 
   static const profile = "assets/images/img_profile.png";
-
-
 
 }
 
