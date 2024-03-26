@@ -38,9 +38,7 @@ class _BotomNavigationBarState extends State<BotomNavigationBar> {
       //     : (currentIndex == 2) ? Knowledgpage() : ProfilePage(),
       body: _widgetOptions.elementAt(selectedIndex),
       bottomNavigationBar: Container(
-
         width: double.infinity,
-
         decoration: BoxDecoration(
           boxShadow: [
             BoxShadow(
@@ -123,8 +121,6 @@ class _BotomNavigationBarState extends State<BotomNavigationBar> {
         selectedItemColor: Colors.blueAccent,
         unselectedItemColor: Colors.grey,
       ),*/
-
     );
-
   }
 }
